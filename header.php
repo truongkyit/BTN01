@@ -10,7 +10,7 @@
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css" rel="stylesheet"> <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
         <script src="js/jquery-1.11.1.min.js"></script>
 
-    <title>1760090</title>
+    <title> SUNSHINE</title>
 
     <style>
             *{
