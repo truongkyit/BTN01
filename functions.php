@@ -1,11 +1,9 @@
 <?php
+require_once './vendor/autoload.php';
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
-
-require_once './vendor/autoload.php';
-
 
 function detectPage(){
 	$uri = $_SERVER['REQUEST_URI'];
@@ -122,7 +120,7 @@ function sendEmail($to, $name, $subject, $content){
     $mail->Port       = 587;                                    // TCP port to connect to
     
     //Recipients
-    $mail->setFrom($EMAIL_FROM, $EMAIL_NAME );
+    $mail->setFrom($EMAIL_FROM, $EMAIL_NAME);
     $mail->addAddress($to, $name);     // Add a recipient
 
     // Content

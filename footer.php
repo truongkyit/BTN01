@@ -1,6 +1,6 @@
             <blockquote class="blockquote">
                 <p class="mb-0"></p>
-                <footer class="blockquote-footer">&copy; 2019 sunshine - 1760090 - 1760102 - 1760129 - 1760138 </footer>
+                <footer class="blockquote-footer">&copy; 2019 Le Nguyen Truong Ky - 1760090</footer>
             </blockquote>
         </div
     <!-- Optional JavaScript -->

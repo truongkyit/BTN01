@@ -1,4 +1,8 @@
 <?php
+    ob_start();
+?>
+
+<?php
     require_once 'init.php';
 ?>
 <?php include 'header.php'; ?>
@@ -13,7 +17,9 @@
 ?>
 <?php if($success): ?>
 
-<?php header('Location: login.php');?> 
+<?php header('Location: index.php');
+    ob_end_flush();
+?>
 <?php else: ?>
 <div class="alter alter-danger" roler="alert"> 
     Kích hoạt tài khoản thất bại
@@ -42,4 +48,3 @@
         </style>
 </form>
 <?php endif; ?>
-<?php include 'footer.php'?>
