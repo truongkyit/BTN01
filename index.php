@@ -48,4 +48,7 @@
 <?php else: ?>
 <?php endif ?>
 
+<?php if($currentUser): ?>
+<img src="avatar.php?id=<?php echo $currentUser['id']; ?>">
+<?php endif; ?>
 

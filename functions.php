@@ -44,10 +44,10 @@ function createUser($displayName, $email,$password){
     return $id;
 }
 
-function updateUserProfile($id, $displayName){
+function updateUserProfile($id, $displayName , $phoneNumber, $avatar){
 	global $db;
-	$stmt = $db->prepare("UPDATE users SET displayName =? WHERE id = ?");
-    return $stmt->execute (array($displayName, $id));
+	$stmt = $db->prepare("UPDATE users SET displayName = ?, phoneNumber = ?, avatar = ? WHERE id = ?");
+    return $stmt->execute (array($displayName, $phoneNumber, $avatar, $id));
 }
 
 
@@ -145,3 +145,23 @@ function activateUser($code){
     }
     return false;
 }
+
+function sendFriendRequest($userId1, $userId2){
+    global $db;
+    $stmt = $db->prepare("INSERT INTO friendship (userId1, userId2) VALUE(?, ?)");
+    $stmt->execute (array($userId1, $userId2));
+}
+
+function removeFriendRequest($userId1, $userId2){
+    global $db;
+    $stmt = $db->prepare("DELETE FROM friendship WHERE (userId1 = ? AND userId2 = ?) OR (userId2 = ? AND userId1 = ?)");
+    $stmt->execute (array($userId1, $userId2, $userId1, $userId2));
+}
+
+function getFriendship($userId1, $userId2){
+    global $db;
+	$stmt = $db->prepare ("SELECT * FROM friendship WHERE userId1 = ? AND userId2 = ?");
+    $stmt->execute(array($userId1, $userId2));
+    return $stmt -> fetch(PDO::FETCH_ASSOC);
+}
+
