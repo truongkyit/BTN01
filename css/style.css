@@ -1,0 +1,208 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    font-family: Arial;
+    font-size: 17px;
+}
+.container > header{
+    background: url('https://www.hcmus.edu.vn/images/2018/11/21/bn2.png') ;
+    width: auto;
+    height: 200px;
+    background-size: cover;
+}
+.container > header >img{
+    width: 200px;
+    height: 80px;
+}
+
+.container nav{
+    background: orange;
+    width: auto;
+    height: 60px;
+    line-height: 60px;
+}
+
+.container nav a{
+    text-decoration: none;
+    color: black;
+    width: 100px;
+    height: 60px;
+    text-align: center;
+    float: left;
+}
+.container nav a[name="size"]{
+    width: 130px;
+    height: 60px;
+    float: left;
+    
+}
+.container a:hover{
+    background: white;
+}
+.container nav button{
+    background-color: #4CAF50;
+    color: white;
+    line-height: 30px;
+    font-size: 14px;
+    height: 60px;
+    float: right;
+    border: 1px solid green;
+}
+.container nav button:hover{
+    background: white;
+}
+.container article{
+    width: 60%;
+    height: 400px;
+    border:3px double;
+    float: left;
+}
+.container aside{
+    float: right;
+    background: gray;
+    height: 405px;
+    width: 30%;
+}
+.container footer{
+    background: orange;
+    width: auto;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    box-shadow: inset 0px 4px 0px 0px red;
+}
+.clear{
+    clear: both;
+}
+
+
+
+
+
+.user-info::after {
+	content: "";
+	clear: both;
+	display: table
+}
+.comment::after {
+	content: "";
+	clear: both;
+	display: table
+}
+.cmtavt img {
+	    margin-left: 30px;
+}
+.avtar img{
+	width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    margin-right: 10px;
+}
+.comment .cmtavt img{
+	width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    margin-right: 10px;
+}
+.user1 .time, .cmtcontent .cmt-action span {
+	font-size: 0.75em;
+}
+.user1 .name,.cmtcontent .cmt-name a {
+	font-weight: bold;
+}
+.avtar{
+	float:left;
+}
+.cmtavt{
+	float:left;
+}
+.action .bl{
+	margin-left: 100px;
+	margin-right: 100px;
+}
+.action {
+	list-style:none;
+	margin-bottom: 10px;
+}
+.action li{
+	display: inline-block;
+}
+.feed .img img {
+	width:500px;
+	height: 300px;
+	margin-top: 10px;
+}
+.feed{
+	width:500px;
+}
+.cmt-action a{
+	margin-right: 50px;
+    margin-left: 10px;
+}
+.writecmt input{
+	    margin-bottom: 80px;
+	    width: 500px;
+	    border-radius: 7px;
+}
+#like{
+	margin-right: 350px;
+}
+.soluotlike{
+	margin-left: 40px;
+    margin-bottom: -10px;
+}
+.cmtcontent{
+	font-size: 0.85em;
+}
+.gachngang1{
+	width: 500px;
+    float: left;
+}
+.gachngang2{
+	width: 500px;
+    float: left;
+    margin-bottom: 5px;
+}
+.gachngang3{
+	width: 500px;
+    float: left;
+    margin-top: 0px;
+}
+#feed-1 .comment {
+	margin-top: 5px;
+}
+#feed-morecmt{
+	color:blue;
+}
+.head {
+	width:900px;
+	height:250px;
+	background-image:'img/d5.jpg;
+}
+.head{
+	text-align: center;
+}
+#timkiem{
+	width: 500px;
+}
+#iconfb{
+	margin-right: 20px;
+}
+#nav-trencung{
+	width: 100%;
+    position: fixed;
+}
+#icon-user{
+	margin-left: 120px;
+    margin-right: 30px;
+}
+#icon-user img{
+	width:30px;
+	height:30px;
+	border-radius: 15px;
+}
+#icon-logout{
+	margin-left: 225px;
+}
