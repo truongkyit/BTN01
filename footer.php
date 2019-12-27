@@ -1,6 +1,6 @@
             <blockquote class="blockquote">
                 <p class="mb-0"></p>
-                <footer class="blockquote-footer">&copy; 2019 Le Nguyen Truong Ky - 1760090</footer>
+                <footer class="blockquote-footer">&copy; Design by Sunshine </footer>
             </blockquote>
         </div>
     <!-- Optional JavaScript -->

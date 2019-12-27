@@ -7,15 +7,15 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="./css/style1.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="shortcut icon" href="https://i.ibb.co/vQNmtFp/logotrongsuot.png"/>
 
     <title>Sunshine chào mừng bạn đến với sunshine</title>
   </head>
   <body>
     <div class="container">
         <header>
-            <img src="https://i.ibb.co/6NrbrbZ/79714211-483983945580463-1628721958797443072-n.png">
-            
+            <img src="https://i.ibb.co/QmGD2NZ/testheader.png">
         </header>
 
         <nav>
@@ -24,7 +24,7 @@
             </div>
             <?php if (!$currentUser):?>  
             <div>
-                <button type="button" class="btn" data-toggle="modal" data-target="#registerModal">Đăng ký</button>
+                <button type="button" name="btndangky" data-toggle="modal" data-target="#registerModal">Đăng ký</button>
             </div>
           
             <div class="modal fade" role="dialog" id="registerModal">
@@ -34,19 +34,18 @@
                         <h3 class="modal-title">Đăng ký</h3>
                         <button type="button" class="close" data-dismiss="modal" >&times;</button>
                     </div> 
-
-                    <div class="modal-body">
-                    <form action="register.php" method="POST">
-                        <div class="col-md-4">
-                            <input type="text" class="form-control" id ="displayName" name="displayName" placeholder="Your name">       
-                            <input type="email" class="form-control" id="email" name="email" placeholder="Email">
-                            <input type="password" class="form-control" id="password" name="password" placeholder="Password">
-                        </div> 
-                        <div class="modal-footer">
-                            <button type="submit" class="btn btn-primary">Đăng ký</button>
-                        </div>      
-                    </form>
-                    </div>
+                <div class="modal-body">
+                <form action="register.php" method="POST">
+                    <div class="col-md-4">
+                        <input type="text" class="form-control" style="display: unset; width:auto" id="displayName" name="displayName" placeholder="Your name">       
+                        <input type="email" class="form-control" style="display: unset; width:auto" id="email" name="email" placeholder="Email">
+                        <input type="password" class="form-control" style="display: unset; width:auto" id="password" name="password" placeholder="Password">
+                    </div> 
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-primary">Đăng ký</button>
+                    </div>      
+                </form>
+                </div>
                 </div>
             </div>
             </div>
@@ -67,8 +66,8 @@
                     <div class="modal-body">
                     <form action="login.php" method="POST">
                         <div class="col-md-4">
-                            <input type="email" class="form-control" id="email" name="email" placeholder="Email">
-                            <input type="password" class="form-control" id="password" name="password" placeholder="Password">
+                            <input type="email" class="form-control" style="display: unset; width:auto" id="email" name="email" placeholder="Email">
+                            <input type="password" class="form-control" style="display: unset; width:auto" id="password" name="password" placeholder="Password">
         
                         </div> 
                         <div class="modal-footer">
@@ -82,6 +81,8 @@
 
             <?php else: ?>
                 <a href='update_profile.php'>Cá nhân</a>
+                <a href="friend.php">Bạn bè</a>
+                <a href='message.php'>Tin nhắn</a>
                 <a href='change_password.php' name="size">Đổi mật khẩu</a>
                 <a href='logout.php';>Đăng Xuất</a>
 
@@ -90,10 +91,14 @@
 
         </nav><br>
         <?php if (!$currentUser):?>  
-        <article></article>
-        <aside></aside>
+        <article>
+            <img style="height: 400px;width: 600px;" class="d-none d-md-block" src="https://demo.sngine.com/content/themes/default/images/home/drawkit-nature-man-colour.svg">
+        </article>
+        <aside style="background: aliceblue;height: 405px; width: 250px;">
+        <marquee><h1 style="color: cadetblue;text-align: center;">Chào mừng <br>đến với <br>website <br>mạng xã<br> hội Sunshine</h1></marquee>
+        </aside>
         <div class="clear"></div><br>
-        <footer>Copyright 2019 by Sunshine</footer>
+        <?php include 'footer.php' ?>
         <?php else: ?>
         <?php endif; ?>
     </div>

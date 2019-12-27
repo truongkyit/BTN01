@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1:3306
--- Thời gian đã tạo: Th12 27, 2019 lúc 04:24 PM
+-- Thời gian đã tạo: Th12 27, 2019 lúc 06:36 PM
 -- Phiên bản máy phục vụ: 5.7.26
 -- Phiên bản PHP: 7.3.5
 
@@ -48,10 +48,10 @@ CREATE TABLE IF NOT EXISTS `comments` (
 
 DROP TABLE IF EXISTS `friendship`;
 CREATE TABLE IF NOT EXISTS `friendship` (
-  `userid1` int(11) NOT NULL,
-  `userid2` int(11) NOT NULL,
+  `userId1` int(11) NOT NULL,
+  `userId2` int(11) NOT NULL,
   `createAt` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  PRIMARY KEY (`userid1`,`userid2`)
+  PRIMARY KEY (`userId1`,`userId2`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -67,6 +67,23 @@ CREATE TABLE IF NOT EXISTS `likes` (
   `postId` int(11) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Cấu trúc bảng cho bảng `messages`
+--
+
+DROP TABLE IF EXISTS `messages`;
+CREATE TABLE IF NOT EXISTS `messages` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `content` text NOT NULL,
+  `userId1` int(11) NOT NULL,
+  `userId2` int(11) NOT NULL,
+  `type` int(11) NOT NULL,
+  `createdAt` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00' ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 

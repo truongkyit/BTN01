@@ -7,14 +7,15 @@ body{
     font-size: 17px;
 }
 .container > header{
-    background: url('https://www.hcmus.edu.vn/images/2018/11/21/bn2.png') ;
+    background-color: cornflowerblue;
     width: auto;
-    height: 200px;
+    height: 100px;
     background-size: cover;
 }
 .container > header >img{
-    width: 200px;
-    height: 80px;
+    width: 250px;
+    height: 90px;
+    align-content: center;
 }
 
 .container nav{
@@ -44,12 +45,15 @@ body{
 .container nav button{
     background-color: #4CAF50;
     color: white;
-    line-height: 30px;
+    line-height: 50px;
     font-size: 14px;
     height: 60px;
+    width: 100px;
     float: right;
     border: 1px solid green;
+    margin-right: 20px;
 }
+
 .container nav button:hover{
     background: white;
 }
@@ -61,7 +65,7 @@ body{
 }
 .container aside{
     float: right;
-    background: gray;
+    background: white;
     height: 405px;
     width: 30%;
 }
@@ -76,6 +80,7 @@ body{
 .clear{
     clear: both;
 }
+
 
 
 

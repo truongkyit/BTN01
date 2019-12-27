@@ -6,6 +6,7 @@
     }
 ?>
 <?php include 'header.php'; ?>
+<div class="container">
 <h1>Đổi mật khẩu</h1>
 <?php if (isset($_POST['currentPassword'])&& isset($_POST['password'])): ?>
 <?php
@@ -43,5 +44,6 @@
     </div>
     <button type="sumit" class="btn btn-primary">Đổi mật khẩu</button>
 </form>
-<?php endif; ?>
+<?php endif; ?><br><br><br><br><br><br><br><br><br><br><br><br><br>
 <?php include 'footer.php'?>
+</div>
