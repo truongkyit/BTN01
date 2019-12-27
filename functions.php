@@ -85,11 +85,31 @@ function getNewfeeds(){
     $stmt->execute();
     return $stmt -> fetchAll(PDO::FETCH_ASSOC);
 }
-function createPost($userid, $content){
+// function getNewcomments(){
+//     global $db;
+//     $stmt=$db->query("SELECT u.displayName,p.* FROM users AS u JOIN comments as cmt WHERE u.id= cmt.userId ORDER BY cmt.createAT DESC");
+//     $stmt->execute(); 
+//     return $stmt -> fetchAll(PDO::FETCH_ASSOC);
+// }
+function getcomment($id){
+    global $db;
+	$stmt = $db->prepare ("SELECT * FROM comments WHERE postId = ?");
+    $stmt->execute(array($id));
+    $posts = $stmt -> fetchAll(PDO::FETCH_ASSOC);
+    return  $posts;
+}
+
+function createPost($userid, $content,$img){
+	global $db;
+	$stmt = $db->prepare("INSERT INTO posts ( content, userid,img) VALUES (?, ?,?)");
+    $stmt->execute (array($content, $userid,$img));
+    return $db->lastInsertId();
+}
+function upComments($postId, $userId,$content){
 	global $db;
 	$hashPassword = password_hash($password, PASSWORD_DEFAULT);
-	$stmt = $db->prepare("INSERT INTO posts ( content, userid) VALUES (?, ?)");
-    $stmt->execute (array($content, $userid));
+	$stmt = $db->prepare("INSERT INTO comments (postId,userId,content) VALUES (? , ?,?)");
+    $stmt->execute (array($postId, $userId,$content));
     return $db->lastInsertId();
 }
 
