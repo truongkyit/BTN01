@@ -6,7 +6,7 @@ $conversations = getLatestConversations($currentUser['id']);
 <?php include 'header.php' ?>
 <div class="container">
 <h1>Danh sách tin nhắn</h1>
-<a href="new-message.php" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Thêm cuộc trò chuyện</a>
+<a href="new-message.php" class="btn btn-primary btn-lg active" role="button" aria-pressed="true"> Thêm cuộc trò chuyện </a>
 <?php foreach ($conversations as $conversation) : ?>
 <div class="card" style="margin-bottom: 10px;">
   <div class="card-body">
