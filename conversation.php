@@ -10,7 +10,7 @@ $user = findUserById($_GET['id']);
 
 ?>
 <?php include 'header.php' ?>
-<h1>Cuộc trò chuyện với: <?php echo $user['displayName'] ?></h1>
+<h1> Cuộc trò chuyện với:  <?php echo $user['displayName'] ?></h1>
 <?php foreach ($messages as $message) : ?>
 <div class="card" style="margin-bottom: 10px;">
   <div class="card-body">
@@ -29,9 +29,9 @@ $user = findUserById($_GET['id']);
 <?php endforeach; ?>
 <form method="POST">
   <div class="form-group">
-    <label for="content">Tin nhắn:</label>
+    <label for="content"> Tin nhắn:</label>
     <textarea class="form-control" id="content" name="content" rows="3"></textarea>
   </div>
-  <button type="submit" class="btn btn-primary">Gửi tin nhắn</button>
+  <button type="submit" class="btn btn-primary"> Gửi tin nhắn</button>
 </form>
 <?php include 'footer.php' ?>
