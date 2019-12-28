@@ -39,8 +39,6 @@
         <input type="password" class="form-control" id ="password" name="password" placeholder="Password">
         <button type ="submit" class ="btn btn-primary">Đăng ký</button>
     </div>
-
-
     <style>
             .form-control{
                 background: #222A0A;
@@ -52,7 +50,6 @@
                 border: 0px;
                 border-bottom: 2px solid gray;
             }
-
         </style>
 </form>
 <?php endif; ?>
