@@ -257,6 +257,7 @@ function getFriends($userId) {
     }
     return $result;
   }
+
   
   function getMessagesWithUserId($userId1, $userId2) {
     global $db;
