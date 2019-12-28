@@ -117,9 +117,8 @@
 			<label for="content"><strong>Nội dung</strong></label>
 			<textarea  class="form-control" name="content" id="content" style="height: 100px;width: 500px;" rows="1"></textarea>
 			<input name="picturepost" id="picturepost" type ="file"class = "form-control-file"id ="avatar1" name="avatar1">
-			<button type ="submit" name="index_post" id="index_post"class ="btn btn-primary">Đăng</button>
-		</div>		
-		
+			<button type ="submit" name="index_post" id="index_post"class ="btn btn-primary"> Đăng </button>
+		</div>			
 		</form><br><br>
 
 		<div id="BangTin">
