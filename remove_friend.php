@@ -4,7 +4,6 @@
     header('Loacation: index.php');
     exit();
   }
-
   $userId = $_POST['id'];
   $profile = findUserById($userId);
   removeFriendRequest($currentUser['id'], $profile['id']);
