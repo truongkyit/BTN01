@@ -2,11 +2,10 @@
     require_once 'init.php';
     if(!$currentUser){
         header('Location: index.php');
-        exit();
-    }
+        exit();   }
 ?>
 <?php include 'header.php'; ?>
-<h1>Bài tập tính tổng 2 số nhập từ bàn phím!</h1>
+<h1>Bài tập tính tổng 2 số nhập từ bàn phím!!!!!!!! </h1>
 <?php if (isset($_POST['number1'])&& isset($_POST['number2'])):?>
 <?php
     $number1=$_POST['number1'];
