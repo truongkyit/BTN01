@@ -6,6 +6,6 @@ if (!$currentUser){
 }
 $content = $_POST['tbbinhluan'];
 $postId  = $_GET['id'];
-
+  
 upComments($postId,$currentUser['id'], $content);
 header('Location: index.php');
