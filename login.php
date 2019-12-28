@@ -21,7 +21,6 @@
     }
 ?>
 <?php if($success): ?>
-
 <?php header('Location: index.php');
     ob_end_flush();
 ?> 
@@ -39,7 +38,6 @@
             <input type="password" class="form-control" id="password" name="password" placeholder="Password">
             <button type="sumit" class="btn btn-primary">Đăng nhập</button>
         </div>       
-
 
         <style>
             .form-control{
